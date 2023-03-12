@@ -1,5 +1,5 @@
-fetch('https://pythonvc.azurewebsites.net/api/PythonHttpTrigger', { method: 'POST' })
+fetch('https://pythonvc.azurewebsites.net/api/PythonHttpTrigger')
   .then(response => response.text())
-  .then(count => {
-    console.log(`Visitor count: ${count}`);
+  .then(data => {
+    document.getElementById('visitor_count').textContent = data;
   });
